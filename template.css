@@ -8,6 +8,9 @@
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
+.qv-viz-center-disclaimer{
+	left:0px;
+}
 #CurrentSelections:hover{
 	opacity:1;
 	transition: opacity 1s linear;
