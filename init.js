@@ -2,7 +2,7 @@ var qlik;
 var scp;
 var qvobjects={};
 var config = {
-	host: "192.168.15.107",
+	host: "localhost",
 	prefix: "/",
 	port : window.location.port,
 	isSecure : window.location.protocol === "https:"
