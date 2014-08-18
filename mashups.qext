@@ -1,0 +1,9 @@
+{
+    "name": "BootStrap",
+    "type": "mashup-template",
+    "appdata": {
+        "qDocName": "${name}",
+        "qDocId": "${docid}"
+    },
+    "allowPosition": false
+}
