@@ -1,6 +1,6 @@
 {
-    "name": "BootStrap",
-    "type": "mashup-template",
+    "name": "Responsive mashup",
+    "type": "mashup",
     "appdata": {
         "qDocName": "${name}",
         "qDocId": "${docid}"

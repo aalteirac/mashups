@@ -69,7 +69,7 @@ function animateHide(toHide,toShow) {
     });
 }
 function init(){
-	require( ["jquery", "jqueryui"], function ( $) {
+	require( ["jquery"], function ( $) {
 		excludeBS();
 		$(window).scroll(function() {
 			$("#CurrentSelections" ).addClass("hideSel");
@@ -79,19 +79,19 @@ function init(){
 			}, 2000));
 		});	
 		$("#main").show();
-		require( ["js/qlikview"], function ( qlikview ){
-			qlik=qlikview;
-			qlikview.getAppList(function(reply) {
+		require( ["js/qlik"], function ( q ){
+			qlik = q;
+			qlik.getAppList(function(reply) {
 				$.each(reply, function(key, value) {
 					if (value.qDocName === "Executive Dashboard" || value.qDocName === "Executive Dashboard.qvf"){
-						var app = qlikview.openApp(value.qDocName, config);
+						var app = qlik.openApp(value.qDocName, config);
 						$( ".qvobject" ).each( function () {
 							var qvid = $( this ).data( "qvid" );
 							app.getObject( this, qvid ).then( function ( object ) {
 								qvobjects[qvid] = object;
 							} );
 						} );
-						qlikview.setOnError( function ( error ) {
+						qlik.setOnError( function ( error ) {
 							alert( error.message );
 						} );
 					}	
